@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import StackNavigation from './navigation/StackNavigation';
+import ExpensesProvider from './store/expenses-context';
+import AuthNavigation from './navigation/AuthNavigation';
+import AuthProvider from './store/auth-context';
 
 export default function App() {
   return (
     <>
-      <StatusBar style="auto" />
-      <StackNavigation />
+      <StatusBar style="light" />
+      <AuthProvider>
+        <ExpensesProvider>
+          <AuthNavigation />
+        </ExpensesProvider>
+      </AuthProvider>
     </>
   );
 }
