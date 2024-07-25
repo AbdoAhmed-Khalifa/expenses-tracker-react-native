@@ -17,7 +17,7 @@ The Expenses Tracker app is designed to help users keep a record of their daily 
 ## Technologies Used
 
 - React Native
-- Redux (for state management)
+- Context API (for state management)
 - React Navigation (for navigating between screens)
 - AsyncStorage (for local data storage)
 - Expo (for development and testing)
