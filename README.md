@@ -31,17 +31,17 @@ To get a local copy of the project up and running, follow these steps:
    git clone https://github.com/AbdoAhmed-Khalifa/expenses-tracker-react-native.git
    ```
 
-   2. **Navigate to the project directory:**
+2. **Navigate to the project directory:**
    ```sh
    cd expenses-tracker-react-native
    ```
 
-   3. **Install dependencies:**
+3. **Install dependencies:**
    ```sh
    npm install
    ```
 
-   4. **Run the app:**
+4. **Run the app:**
    ```sh
    nox expo start
    ```
