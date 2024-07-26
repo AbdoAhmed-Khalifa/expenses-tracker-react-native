@@ -2,7 +2,7 @@ const Stack = createNativeStackNavigator();
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomTabNavigation from './BottomTabNavigation';
 import { GlobalStyles } from '../constants/styles';
-import ManageExpenses from '../screens/ManageExpenses';
+import EditExpenses from '../screens/EditExpense';
 function StackNavigation() {
   return (
     <Stack.Navigator
@@ -15,11 +15,12 @@ function StackNavigation() {
     >
       <Stack.Screen
         name="ExpensesOverview"
-        component={ManageExpenses}
+        component={BottomTabNavigation}
         options={{
           headerShown: false,
         }}
       />
+      <Stack.Screen name="EditExpenses" component={EditExpenses} />
     </Stack.Navigator>
   );
 }

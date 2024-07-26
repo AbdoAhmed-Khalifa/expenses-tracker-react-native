@@ -4,8 +4,8 @@ import AllExpenses from '../screens/AllExpenses';
 import { GlobalStyles } from './../constants/styles';
 import { Ionicons } from '@expo/vector-icons';
 import IconButton from '../components/UI/IconButton';
-import ManageExpenses from '../screens/ManageExpenses';
 import { useAuth } from '../store/auth-context';
+import AddExpense from '../screens/AddExpense';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -56,19 +56,13 @@ function BottomTabNavigation() {
       />
       <BottomTab.Screen
         name="ManageExpenses"
-        component={ManageExpenses}
+        component={AddExpense}
         options={{
           title: 'Add Expense',
           tabBarLabel: 'Add Expenses',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="add-circle-outline" size={size} color={color} />
           ),
-          listeners: ({ navigation }) => ({
-            tabPress: e => {
-              e.preventDefault();
-              navigation.navigate('ManageExpenses', { expenseId: undefined });
-            },
-          }),
         }}
       />
     </BottomTab.Navigator>

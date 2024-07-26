@@ -3,6 +3,10 @@ import ExpensesProvider from './store/expenses-context';
 import AuthNavigation from './navigation/AuthNavigation';
 import AuthProvider from './store/auth-context';
 
+function Root() {
+  return <AuthNavigation />;
+}
+
 export default function App() {
   return (
     <>

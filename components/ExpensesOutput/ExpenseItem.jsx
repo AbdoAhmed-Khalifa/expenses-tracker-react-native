@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 function ExpenseItem({ description, amount, date, id }) {
   const navigation = useNavigation();
   function handlePressItem() {
-    navigation.navigate('ManageExpenses', { expenseId: id });
+    navigation.navigate('EditExpenses', { expenseId: id });
   }
 
   return (
